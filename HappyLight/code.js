@@ -1,55 +1,64 @@
-function updateBackground()
-{
-	let numRed = document.getElementById("redSlider").value;
-	numRed = parseInt(numRed);
-	let numGreen = document.getElementById("greenSlider").value;
-	numGreen = parseInt(numGreen);
-	let numBlue = document.getElementById("blueSlider").value;
-	numBlue = parseInt(numBlue);
-	document.body.style.backgroundColor = "rgb("+numRed+", "+numGreen
-		+", "+numBlue+")";
-}
-let flowTimer = null;
-startFlow();
-function startFlow()
-{
-	endFlow();
-	flowTimer = setInterval(colorShift, 50);
-}
-function endFlow()
-{
-	if (flowTimer != null)
-		clearInterval(flowTimer);
-}
+let flowTimer = setInterval(colorShift, 50);
+let r = 255;
+let g = 0;
+let b = 0;
+let redLabel = document.getElementById("red");
+let greenLabel = document.getElementById("green");
+let blueLabel = document.getElementById("blue");
 function colorShift()
 {
-	let r = document.getElementById("redSlider");
-	let g = document.getElementById("greenSlider");
-	let b = document.getElementById("blueSlider");
-	
-	if (r.value < 255 && g.value == 0 && b.value == 255)
-		r.value ++;
-	else if (r.value == 255 && g.value == 0 && b.value > 0)
-		b.value --;
-	else if (r.value == 255 && g.value < 255 && b.value == 0)
-		g.value ++;
-	else if (r.value > 0 && g.value == 255 && b.value == 0)
-		r.value --;
-	else if (r.value == 0 && g.value == 255 && b.value < 255)
-		b.value ++;
-	else if (r.value == 0 && g.value > 0 && b.value == 255)
-		g.value --;
+	if (r < 255 && g == 0 && b == 255)
+		r ++;
+	else if (r == 255 && g == 0 && b > 0)
+		b --;
+	else if (r == 255 && g < 255 && b == 0)
+		g ++;
+	else if (r > 0 && g == 255 && b == 0)
+		r --;
+	else if (r == 0 && g == 255 && b < 255)
+		b ++;
+	else if (r == 0 && g > 0 && b == 255)
+		g --;
 	else
 	{
-		r.value ++;
-		g.value --;
-		b.value --;
+		r ++;
+		g --;
+		b --;
 	}
-	updateBackground();
-	
+    document.body.style.backgroundColor = "rgb("+r+", "+g +", "+b+")";	
+    redLabel.innerText = r;
+    greenLabel.innerText = g;
+    blueLabel.innerText = b;
 }
 
+/*
+	Modal Box
+*/
+// Get the modal
+var modal = document.getElementById("myModal");
 
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
 
 
 

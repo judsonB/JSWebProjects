@@ -2,21 +2,20 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="style.css">
-		<script src="code.js"></script>
 	</head>
-	<body onload="updateBackground()">
-		<div id="mainWrapper">
-			<div class="slidecontainer">
-			  <input type="range" min="0" max="255" value="255" class="slider red" id="redSlider" onchange="updateBackground()">
+	<body>
+		<button id="myBtn">+</button>
+		<div id="myModal" class="modal">
+			<div class="modal-content">
+				<span class="close">&times;</span>
+				<h1>My Happy Light</h1>
+				<p>R: <span id="red"></span></p>
+				<p>G: <span id="green"></span></p>
+				<p>B: <span id="blue"></span></p>
+				<p id="copy">&copy;Birkel2024</p>
 			</div>
-			<div class="slidecontainer">
-			  <input type="range" min="0" max="255" value="0" class="slider green" id="greenSlider" onchange="updateBackground()">
-			</div>
-			<div class="slidecontainer">
-			  <input type="range" min="0" max="255" value="0" class="slider blue" id="blueSlider" onchange="updateBackground()">
-			</div>
-			<button onclick="startFlow()">Start Flow</button>
-			<button onclick="endFlow()">End Flow</button>
 		</div>
+		
+		<script src="code.js"></script>
 	</body>
 </html>
