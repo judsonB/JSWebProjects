@@ -1,0 +1,29 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body
+{
+    
+}
+
+#mainWrapper
+{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+}
+#pond
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap:10px;
+}
+.fish
+{
+    width: 8%;
+
+}
