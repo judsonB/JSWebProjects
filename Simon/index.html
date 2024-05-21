@@ -7,14 +7,32 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="simon">
-        <div id="green" class="button"></div>
-        <div id="red" class="button"></div>
-        <div id="yellow" class="button"></div>
-        <div id="blue" class="button"></div>
+    <div id="mainWrapper">
+        <div id="justAnotherContainer">
+            <div id="warning">
+                <h2>This game can't be played on a screen smaller than 650px. If using a mobile device, try rotating the phone so that the long side is up-and-down rather than side-to-side.</h2>
+            </div>
+            <h1>Retro Recall</h1>
+            <p>This is my rendition of the game "Simon"<br> Repeat the pattern<br></p>
+            <h2>Round: <span id="roundNum">0</span></h2>
+            <p id="response">Let's go!</p>
+            <div id="container">
+                <div id="blockage"></div>
+                <div id="simon">
+                    <div id="green" class="button"></div>
+                    <div id="red" class="button"></div>
+                    <div id="yellow" class="button"></div>
+                    <div id="blue" class="button"></div>
+                </div>
+            </div>
+            <button id="start-btn">Start</button>
+            <p>This program was written in ChatGPT <br>
+                and adapted by Judson Birkel<br>
+                (to make it actually work)<br>
+                &copy;Birkel2024
+            </p>
+        </div>
     </div>
-    <button id="start-btn">Start</button>
-    <p>This program was written in ChatGPT and modified by Judson Birkel<br>It appears to still have bugs...<br>&copy;Birkel2024</p>
-    <script src="code.js"></script>
+    <script src="codeOriginal.js"></script>
 </body>
 </html>
