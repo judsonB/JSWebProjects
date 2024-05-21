@@ -12,6 +12,7 @@ startButton.addEventListener('click', startGame);
 //Event Listeners
 function selectColor(e)
 {
+  console.log(e.target)
   let button = e.target;
   let color = button.id;
   playerSequence.push(color);
@@ -50,8 +51,7 @@ function playSequence()
 }
 function lightNextBtn()
 {
-  if (playerSequence.length < gameSequence.length) {
-    console.log(playSequence.length+" - "+gameSequence.length+" - "+sequenceIndex)
+  if (sequenceIndex < gameSequence.length) {
     const button = document.getElementById(gameSequence[sequenceIndex]);
     button.classList.add('active');
     setTimeout(unLightBtn, 500 ,button);
@@ -69,9 +69,9 @@ function unLightBtn(button)
 }
 
 function checkSequence() {
-    if (playerSequence[playerSequence.length] !== gameSequence[playerSequence.length]) {
+  console.log()
+    if (playerSequence[playerSequence.length-1] !== gameSequence[playerSequence.length-1]) {
         alert('Game Over! Try Again.');
-        //startGame();
         playerSequence.length = 0;
         playSequence();
         return;
@@ -83,6 +83,7 @@ function checkSequence() {
 }
 function nextLevel()
 {
+  console.log("generatinig new sequence")
   level++;
   sequenceIndex = 0;
   playerSequence.length = 0;
