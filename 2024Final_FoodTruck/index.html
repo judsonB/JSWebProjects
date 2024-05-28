@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Fizz & Frost</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="mainWrapper">
+        <header>
+            <img id="logo" src="Files/Fizz&Frost.png" alt="Fizz&Frost Logo">
+            <h1>The Fizz&amp;Frost</h1>
+        </header>
+        <div id="details" class="modal">
+            <div class = "modal-content">
+                <img id="itemImg" src="Files/Rootbeer.webp" alt="Root Beer Delight">
+                <div class="text">
+                    <div id="itemHeader">
+                        <h2 id="itemName"></h2>
+                    </div>
+                    <div id="itemMain">
+                        <p id="itemDescription"></p>
+                        <table>
+                            <tr>
+                                <th>Soda</th>
+                                <td id="itemSoda"></td>
+                            </tr>
+                            <tr>
+                                <th>Ice Cream</th>
+                                <td id="itemIceCream"></td>
+                            </tr>
+                            <tr>
+                                <th>Toppings</th>
+                                <td id="itemToppings"></td>
+                            </tr>
+                            <tr>
+                                <th>Garnish</th>
+                                <td id="itemGarnish"></td>
+                            </tr>
+                        </table>
+                        <p>Item Count<input type="number" id="itemCount" value="1"></p>
+                        <h2 id="cost">Cost: $<span id="itemCost">0.00</span></h2>
+                    </div>
+                    <div class="buttonBox">
+                        <button id="addItem">Add</button>
+                        <button id="modifyItem">Modify</button>
+                        <button id="cancelItem">Cancel</button>
+                    </div>
+                </div>    
+            </div>
+        </div>
+        <div id="modify" class="modal">
+            <div class = "modal-content">
+                <div id="sodaOptions" class="checkGroup">
+                    <h2>Choose Your Soda</h2>
+                    <div class = "option">
+                        <input type="checkbox" id="sodaRoot" name="sodaRoot" value="Root Beer">
+                        <label for="sodaRoot">Root Beer</label>
+                    </div>
+                    <div class = "option">
+                        <input type="checkbox" id="sodaButter" name="sodaButter" value="Butterbeer">
+                        <label for="sodabutter">Butterbeer</label>
+                    </div>
+                    <div class = "option">
+                        <input type="checkbox" id="sodaCaramel" name="sodaCaramel" value="Caramel Cream">
+                        <label for="sodaCaramel">Caramel Cream</label>
+                    </div>
+                    <div class = "option">
+                        <input type="checkbox" id="sodaCherry" name="sodaCherry" value="Cherry">
+                        <label for="sodaCherry">Cherry</label>
+                    </div>
+                    
+                    <div class = "option">
+                        <input type="checkbox" id="sodaGinger" name="sodaGinger" value="Gingerbeer">
+                        <label for="sodaGinger">Gingerbeer</label>
+                    </div>
+                    <div class = "option">
+                        <input type="checkbox" id="sodaBlue" name="sodaBlue" value="Blueberry">
+                        <label for="sodaBlue">Blueberry</label>
+                    </div>
+                    <div class = "option">
+                        <input type="checkbox" id="sodaBerry" name="sodaBerry" value="Mixed Berry">
+                        <label for="sodaBerry">Mixed Berry</label>
+                    </div>
+                    <div class = "option">
+                        <input type="checkbox" id="sodaCoconut" name="sodaCoconut" value="Coconut">
+                        <label for="sodaCoconut">Coconut</label>
+                    </div>
+                    <div class = "option">
+                        <input type="checkbox" id="sodaChocolate" name="sodaChocolate" value="Chocolate">
+                        <label for="sodaChocolate">Chocolate</label>
+                    </div>
+                    <div class = "option">
+                        <input type="checkbox" id="sodaMarsh" name="sodaMarsh" value="Marshmallow">
+                        <label for="sodaMarsh">Marshmallow</label>
+                    </div>
+                    <div class = "option">
+                        <input type="checkbox" id="sodaOrange" name="sodaOrange" value="Orange">
+                        <label for="sodaOrange">Orange</label>
+                    </div>
+                    <div class = "option">
+                        <input type="checkbox" id="sodaDrP" name="sodaDrP" value="Dr. Pepper">
+                        <label for="sodaDrP">Dr. Pepper</label>
+                    </div>
+                    <div class = "option">
+                        <input type="checkbox" id="sodaSprite" name="sodaSprite" value="Sprite">
+                        <label for="sodaSprite">Sprite</label>
+                    </div>
+                </div>
+                <div id="iceOptions" class="checkGroup">
+                    <h2>Choose Your Ice Cream</h2>
+                    <div class = "option">
+                        <input type="checkbox" id="iceVanilla" name="iceVanilla" value="Vanilla Bean">
+                        <label for="iceVanilla">Vanilla Bean</label>
+                    </div>
+                    <div class = "option">
+                        <input type="checkbox" id="iceCoffee" name="iceCoffee" value="Coffee">
+                        <label for="iceCoffee">Coffee</label>
+                    </div>
+                    <div class = "option">
+                        <input type="checkbox" id="iceButter" name="iceButter" value="Butterscotch">
+                        <label for="iceButter">Butterscotch</label>
+                    </div>
+                    <div class = "option">
+                        <input type="checkbox" id="icePeach" name="icePeach" value="Peach">
+                        <label for="icePeach">Peach</label>
+                    </div>
+                    <div class = "option">
+                        <input type="checkbox" id="iceLemon" name="iceLemon" value="Lemon Sorbet">
+                        <label for="iceLemon">Lemon Sorbet</label>
+                    </div>
+                    <div class = "option">
+                        <input type="checkbox" id="iceApple" name="iceApple" value="Apple Cinnamon">
+                        <label for="iceApple">Apple Cinnamon</label>
+                    </div>
+                    <div class = "option">
+                        <input type="checkbox" id="iceCoconut" name="iceCoconut" value="Coconut">
+                        <label for="iceCoconut">Coconut</label>
+                    </div>
+                    <div class = "option">
+                        <input type="checkbox" id="iceSalted" name="iceSalted" value="Salted Caramel">
+                        <label for="iceSalted">Salted Caramel</label>
+                    </div>
+                    <div class = "option">
+                        <input type="checkbox" id="iceMint" name="iceMint" value="Mint Chocolate Chip">
+                        <label for="iceMint">Mint Chocolate Chip</label>
+                    </div>
+                    <div class = "option">
+                        <input type="checkbox" id="iceChocolate" name="iceChocolate" value="Chocolate">
+                        <label for="iceChocolate">Chocolate</label>
+                    </div>
+                </div>
+                <div id="topOptions" class="checkGroup">
+                    <h2>Choose Your Toppings</h2>
+                    <div class = "option">
+                        <input type="checkbox" id="topWhip" name="topWhip" value="Whipping Cream">
+                        <label for="topWhip">Whipping Cream</label>
+                    </div>
+                    <div class = "option">
+                        <input type="checkbox" id="topCherry" name="topCherry" value="Maraschino Cherry">
+                        <label for="topCherry">Maraschino Cherry</label>
+                    </div>
+                    <div class = "option">
+                        <input type="checkbox" id="topCaramel" name="topCaramel" value="Caramel Sauce">
+                        <label for="topCaramel">Caramel Sauce</label>
+                    </div>
+                    <div class = "option">
+                        <input type="checkbox" id="topChocolate" name="topChocolate" value="Chocolate Sauce">
+                        <label for="topChocolate">Chocolate Sauce</label>
+                    </div>
+                    <div class = "option">
+                        <input type="checkbox" id="topGinger" name="topGinger" value="Crushed Ginger Snaps">
+                        <label for="topGinger">Crushed Ginger Snaps</label>
+                    </div>
+                    <div class = "option">
+                        <input type="checkbox" id="topBlue" name="topBlue" value="Blueberries">
+                        <label for="topBlue">Blueberries</label>
+                    </div>
+                    <div class = "option">
+                        <input type="checkbox" id="topMix" name="topMix" value="Mixed Berries">
+                        <label for="topMix">Mixed Berries</label>
+                    </div>
+                    <div class = "option">
+                        <input type="checkbox" id="topMarsh" name="topMarsh" value="Toasted Marshmallows">
+                        <label for="topMarsh">Toasted Marshmallows</label>
+                    </div>
+                </div>
+                <div id="garnishOptions" class="checkGroup">
+                    <h2>Choose Your Garnish</h2>
+                    <div class = "option">
+                        <input type="checkbox" id="garnishGold" name="garnishGold" value="Gold Sugar Crystals">
+                        <label for="garnishGold">Gold Sugar Crystals</label>
+                    </div>
+                    <div class = "option">
+                        <input type="checkbox" id="garnishLemon" name="garnishLemon" value="Lemon Wedge">
+                        <label for="garnishLemon">Lemon Wedge</label>
+                    </div>
+                    <div class = "option">
+                        <input type="checkbox" id="garnishCoconut" name="garnishCoconut" value="Coconut Flakes">
+                        <label for="garnishCoconut">Coconut Flakes</label>
+                    </div>
+                    <div class = "option">
+                        <input type="checkbox" id="garnishSalt" name="garnishSalt" value="Sea Salt">
+                        <label for="garnishSalt">Sea Salt</label>
+                    </div>
+                    <div class = "option">
+                        <input type="checkbox" id="garnishChocChips" name="garnishChocChips" value="Crushed Chocolate Chips">
+                        <label for="garnishChocChips">Crushed Chocolate Chips</label>
+                    </div>
+                    <div class = "option">
+                        <input type="checkbox" id="garnishGraham" name="garnishGraham" value="Crushed Graham Crackers">
+                        <label for="garnishGraham">Crushed Graham Crackers</label>
+                    </div>
+                </div>
+                <div class="buttonBox">
+                    <button id="addModify">Update</button>
+                    <button id="cancelModify">Cancel</button>
+                </div>
+            </div>
+        </div>
+        <div id="details" class="modal">
+            <div class = "modal-content">
+                <h2>Total</h2>
+                <div id="myItems">
+                    <div class="orderItem">
+                        <p>Root: Beer Delight</p>
+                        <p>Soda: Root Beer</p>
+                        <p>Ice Cream: Vanilla Bean</p>
+                        <p>Toppings: Whipping Cream</p>
+                        <p>Garnish: </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <main>
+            <!--
+                The Main section will hold a set of "items", each containing an image and heading. They will take the form of:
+                    <div class="item" id="root">
+                        <img src="Files/Rootbeer.webp" alt="Root Beer Delight">
+                        <h2>Classic Root Beer Delight</h2>
+                    </div>
+            -->
+        </main>
+        <footer>
+            <h2>Total: $<span id="total">0.00</span></h2>
+            <div class="buttonBox">
+                <button id="viewOrder">View Order</button>
+                <button id="cancelOrder">Cancel Order</button>
+            </div>
+        </footer>
+    </div>
+    <script src="code.js"></script>
+</body>
+</html>

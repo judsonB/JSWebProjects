@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Fizz & Frost</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="mainWrapper">
+        <header>
+            <img id="logo" src="Files/Fizz&Frost.png" alt="Fizz&Frost Logo">
+            <h1>The Fizz&amp;Frost</h1>
+        </header>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <div id="ItemDetails">
+                    <div class="itemFinal">
+                        <h2>Classic Root Beer Delight</h2>
+                        <p id="RBCount">0</p>
+                        <p>$<span id="RBCost">4.00</span></p>
+                        <p>$<span id="RBSub">0</span></p>
+                    </div>
+                    <div class="itemFinal">
+                        <h2>Blueberry Cream Soda</h2>
+                        <p id="blueCount">0</p>
+                        <p>$<span id="blueCost">5.00</span></p>
+                        <p>$<span id="blueSub">0</span></p>
+                    </div>
+                    <div class="itemFinal">
+                        <h2>Lemon Berry Bash</h2>
+                        <p id="lemonCount">0</p>
+                        <p>$<span id="lemonCost">5.25</span></p>
+                        <p>$<span id="lemonSub">0</span></p>
+                    </div>
+                    <div class="itemFinal">
+                        <h2>Mint Chocolate Chip Fizz</h2>
+                        <p id="mintCount">0</p>
+                        <p>$<span id="mintCost">4.75</span></p>
+                        <p>$<span id="mintSub">0</span></p>
+                    </div>
+                    <div class="itemFinal">
+                        <h2>Butterbeer Delight</h2>
+                        <p id="butterCount">0</p>
+                        <p>$<span id="butterCost">6.00</span></p>
+                        <p>$<span id="butterSub">0</span></p>
+                    </div>
+                    <div class="subCost">
+                        <h2>Subtotal</h2>
+                        <p>$<span id="subMoney">0</span></p>
+                    </div>
+                    <div class="taxCost">
+                        <h2>Total Cost</h2>
+                        <p>$<span id="taxMoney">0</span></p>
+                    </div>
+                    <div class="finalCost">
+                        <h2>Total Cost</h2>
+                        <p>$<span id="money">0</span></p>
+                    </div>
+                </div>
+                <div class="buttonList">
+                    <button id="placeOrder">Submit Order</button>
+                    <button id="makeChanges">Make Changes</button>
+                </div>
+            </div>
+        </div>
+        <main>
+            <div class="item" id="root">
+                <img src="Files/Rootbeer.webp" alt="Root Beer Delight">
+                <h2>Classic Root Beer Delight</h2>
+                <h3>Price: $<span class="cost">4.00</span></h3>
+                <div class="amount">
+                    <p class="down">&#8681;</p>
+                    <p class="count">0</p>
+                    <p class="up">&#8679;</p>
+                </div>
+            </div>
+            <div class="item" id="blue">
+                <img src="Files/Blueberry.webp" alt="Classic Blueberry Cream Soda">
+                <h2>Classic Blueberry Cream Soda</h2>
+                <h3>Price: $<span class="cost">5.00</span></h3>
+                <div class="amount">
+                    <p class="down">&#8681;</p>
+                    <p class="count">0</p>
+                    <p class="up">&#8679;</p>
+                </div>
+            </div>
+            <div class="item" id="lemon">
+                <img src="Files/LemonBerry.webp" alt="Lemon Berry Bash">
+                <h2>Lemon Berry Bash</h2>
+                <h3>Price: $<span class="cost">5.25</span></h3>
+                <div class="amount">
+                    <p class="down">&#8681;</p>
+                    <p class="count">0</p>
+                    <p class="up">&#8679;</p>
+                </div>
+            </div>
+            <div class="item" id="mint">
+                <img src="Files/MintChocolate.webp" alt="Mint Chocolate Chip Fizz">
+                <h2>Mint Chocolate Chip Fizz</h2>
+                <h3>Price: $<span class="cost">4.75</span></h3>
+                <div class="amount">
+                    <p class="down">&#8681;</p>
+                    <p class="count">0</p>
+                    <p class="up">&#8679;</p>
+                </div>
+            </div>
+            <div class="item" id="butter">
+                <img src="Files/Butterbeer.webp" alt="Butterbeer Delight">
+                <h2>Butterbeer Delight</h2>
+                <h3>Price: $<span class="cost">6.00</span></h3>
+                <div class="amount">
+                    <p class="down">&#8681;</p>
+                    <p class="count">0</p>
+                    <p class="up">&#8679;</p>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <h2>Total: $<span id="total">0.00</span></h2>
+            <div class="buttonBox">
+                <button id="viewOrder">View Order</button>
+                <button id="cancelOrder">Cancel Order</button>
+            </div>
+        </footer>
+    </div>
+    <script src="code.js"></script>
+</body>
+</html>

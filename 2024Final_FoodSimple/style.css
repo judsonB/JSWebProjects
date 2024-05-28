@@ -1,0 +1,172 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body
+{
+    background-color: rgb(0, 45, 115);
+}
+#mainWrapper
+{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+header
+{
+    display: flex;
+    align-items: center;
+    
+}
+#logo
+{
+    width: 150px;
+}
+header h1
+{
+    color: white;
+}
+.amount
+{
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+.amount p
+{
+    margin: 10px;
+}
+main
+{
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+}
+.item
+{
+    border: 2px outset black;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+}
+.item img
+{
+    width: 100%;
+}
+.item h2, .item h3
+{
+    padding: 10px;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    height: 100%;
+}
+.up:hover, .down:hover
+{
+    color: orange;
+    cursor: pointer;
+}
+.up:active, .down:active
+{
+    color: rgb(204, 133, 0);
+}
+.buttonBox
+{
+    display: flex;
+    justify-content: space-evenly;
+}
+.buttonBox button
+{
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+#cost
+{
+    text-align: right;
+}
+#viewOrder, #addItem
+{
+    background-color:green
+}
+#modifyItem
+{
+    background-color:orange
+}
+#cancelOrder, #cancelItem
+{
+    background-color: red;
+}
+footer h2
+{
+    color: white;
+    text-align: right;
+    padding-right: 50px;
+}
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    justify-content: center;
+    align-items: center;
+  }
+ 
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .itemFinal, .finalCost, .subCost, .taxCost
+  {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    align-items: baseline;
+  }
+  .itemFinal h2
+  {
+    width: 40%;
+  }
+  .itemFinal p, .finalCost p, .subCost p, .taxCost p
+  {
+    width: 20%;
+  }
+  .finalCost h2, .subCost h2, .taxCost h2
+  {
+    text-align: right;
+    width: 80%;
+    padding-right: 20px;
+  }

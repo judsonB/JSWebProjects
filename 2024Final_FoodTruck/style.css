@@ -1,0 +1,159 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body
+{
+    background-color: rgb(0, 45, 115);
+}
+#mainWrapper
+{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+header
+{
+    display: flex;
+    align-items: center;
+    
+}
+#logo
+{
+    width: 150px;
+}
+header h1
+{
+    color: white;
+}
+.modal 
+{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+    justify-content: center;
+    align-items: center;
+}
+.modal-content
+{
+    display: flex;
+    background-color: white;
+    width: 1000px;
+}
+.modal-content img
+{
+    width: 50%;
+}
+.modal-content .text
+{
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+#itemName
+{
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
+}
+#itemMain
+{
+    height: 100%;
+}
+#itemDescription
+{
+    margin-bottom: 10px;
+}
+.modal-content .text table,.modal-content .text td, .modal-content .text th
+{
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin: 10px auto;
+    width: 100%;
+    padding: 5px;
+}
+.modal-content .text th
+{
+    text-align: left;
+    width: 35%;
+}
+#modify .modal-content
+{
+    padding: 20px;
+    flex-wrap: wrap;
+}
+p:has(#itemCount)
+{
+    font-size: 20px;;
+}
+#itemCount
+{
+    margin-left: 10px;
+    width: 60px;
+    font-size: 20px;
+}
+.checkGroup
+{
+    width: 25%;
+}
+main
+{
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+}
+.item
+{
+    border: 2px outset black;
+    width: 25%;
+}
+.item img
+{
+    width: 100%;
+}
+.item h2
+{
+    padding: 10px;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+.buttonBox
+{
+    display: flex;
+    justify-content: space-evenly;
+}
+.buttonBox button
+{
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+#cost
+{
+    text-align: right;
+}
+#viewOrder, #addItem
+{
+    background-color:green
+}
+#modifyItem
+{
+    background-color:orange
+}
+#cancelOrder, #cancelItem
+{
+    background-color: red;
+}
+
+
