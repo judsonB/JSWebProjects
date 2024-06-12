@@ -1,0 +1,27 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body
+{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#mainWrapper
+{
+    border: 1vw solid black;
+    box-shadow: 10px 10px 10px #555555;
+    width: 77vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+.colorBox
+{
+    width: 1vw;
+    height: 1vw;
+}
